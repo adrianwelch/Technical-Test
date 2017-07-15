@@ -1,4 +1,2 @@
 angular
-  .module('precedent', [
-
-  ]);
+  .module('precedentApp', ['ui.router']);
