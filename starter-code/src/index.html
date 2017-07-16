@@ -22,14 +22,41 @@
               interval:   2000
           });
       });
+    //  burger menu from iphone 6 plus
+      $(document).ready(function () {
+			  $(".navbar-toggle").on("click", function () {
+				    $(this).toggleClass("active");
+			  });
+		});
       </script>
 
 	</head>
 
   <body ng-controller="PrecedentCtrl as precedent">
     <div class="container">
+
+      <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+			         <li class="active"><a href="http://precedent.com"target="_blank">Home</a></li>
+			         <li class="active"><a href="http://www.precedent.com/what-we-do"target="_blank">What we do</a></li>
+			         <li class="active"><a href="http://www.precedent.com/our-work"target="_blank">Our Thinking</a></li>
+			         <li class="active"><a href="http://www.precedent.com/our-team"target="_blank">Our Team</a></li>
+			         <li class="active"><a href="http://www.precedent.com/our-locations"target="_blank">Our Locations</a></li>
+				  </ul>
+        </div>
+      </div>
       <div class="row">
         <div class="col-sm-12">
+
           <div id="Carousel" class="carousel slide" data-ride="carousel">
               <ol class="carousel-indicators">
                   <li data-target="#Carousel" data-slide-to="0" class="active"></li>
@@ -39,19 +66,19 @@
               <!-- Carousel items -->
               <div class="carousel-inner" role="listbox">
                   <div class="item active">
-                      <img src="http://i.imgur.com/p8oIjp8.jpg" style="height: 100vh;">
+                      <img src="http://i.imgur.com/p8oIjp8.jpg" style="height: 85vh;">
                       <div class="carousel-caption">
                         <h1>City of Perth</h1>
                       </div>
                   </div>
                   <div class="item">
-                      <img src="http://i.imgur.com/g0TKkcZ.jpg" style="height: 100vh;">
+                      <img src="http://i.imgur.com/g0TKkcZ.jpg" style="height: 85vh;">
                       <div class="carousel-caption">
                         <h1>Parkinson's UK</h1>
                       </div>
                   </div>
                   <div class="item">
-                      <img src="http://i.imgur.com/wCLr8xF.jpg" style="height: 100vh;">
+                      <img src="http://i.imgur.com/wCLr8xF.jpg" style="height: 85vh;">
                       <div class="carousel-caption">
                         <h1>Leeds College of Music</h1>
                       </div>
@@ -70,10 +97,10 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-6">
-          <h3>heres some example text I am writing below neatly about the company this company has worked with digitaly n dat</h3>
+        <div class="col-md-8">
+          <h3 class="bottomText">heres some example text I am writing below neatly about the company this company has worked with digitaly n dat</h3>
         </div>
-        <div class="col-sm-6">
+        <div class="col-md-4 email">
           <h3>Email</h3>
           <form name="form" class="css-form" novalidate>
             <label>
