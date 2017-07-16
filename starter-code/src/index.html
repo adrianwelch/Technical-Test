@@ -30,8 +30,6 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
-          <h1>hi</h1>
-
           <div id="Carousel" class="carousel slide" data-ride="carousel">
               <ol class="carousel-indicators">
                   <li data-target="#Carousel" data-slide-to="0" class="active"></li>
@@ -70,6 +68,32 @@
               </a>
           </div>
         </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <h3>heres some example text I am writing below neatly about the company this company has worked with digitaly n dat</h3>
+        </div>
+        <div class="col-sm-6">
+          <h3>Email</h3>
+          <form name="form" class="css-form" novalidate>
+            <label>
+              <input type="email" placeholder="Enter your email" ng-model="user.email" name="uEmail" required="" />
+            </label>
+            <br />
+            <div ng-show="form.$submitted || form.uEmail.$touched">
+              <span ng-show="form.uEmail.$error.required">Email is required for subscription</span>
+              <span ng-show="form.uEmail.$error.email">This is not a valid email.</span>
+            </div>
+            <input type="submit" ng-click="update(user)" value="Save" />
+          </form>
+        </div>
+
+
+
+
+
+
+
       </div>
     </div>
   </body>

@@ -1,2 +1,2 @@
 angular
-  .module('precedentApp', ['ui.router']);
+  .module('precedentApp', ['ui.router', 'ngMessages']);
