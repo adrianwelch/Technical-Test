@@ -377,9 +377,6 @@ form div span {
 }
 
 
-
-
-
 @media (max-width: 979px) {
 
   #Carousel .item {
@@ -428,8 +425,66 @@ form div span {
   }
 }
 
+@media (min-width:887px) {
+  #Carousel .item {
+    height: 65vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  nav div {
+      &.left {
+        left: -81.9%;
+        width: 84%;
+      }
+    }
+
+  nav > div.left h2 {
+      font-size: 22px;
+      margin-left: -16%;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+  nav > div .links ul li a {
+
+  }
+
+  nav > div.left h2 {
+    font-size: 26px;
+    margin-left: -120px;
+  }
+
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 { font-size: 12px;
+  }
+
+  footer {
+    height: 35vh;
+    h3 {
+      margin-left: 5%;
+    }
+    .email {
+      margin-left: -16%;
+    }
+  }
+}
+
 // small desktop & up
-@media (min-width: 979px) {
+@media (min-width:992px) {
 
   #Carousel .item {
     height: 65vh;
@@ -437,15 +492,46 @@ form div span {
     background-repeat: no-repeat;
     background-position: center;
   }
+
+  nav > div.left h2 {
+      font-size: 36px;
+      margin-left: -16%;
+    }
+
+  footer {
+    height: 35vh;
+  }
+
 }
 
-// large desktop
+// from 1200 large desktop done
 @media (min-width: 1200px) {
 
   #Carousel .item {
     height: 85vh;
   }
+
+  h1 {
+    font-family: $main-font;
+    font-size: 55px;
+    margin-right: 100%;
+    width: 259px;
+    font-weight: bold;
+    text-align: left;
+    letter-spacing: 2px;
+  }
+
+  h2 {
+    font-family: $main-font;
+    font-size: 14px;
+    margin-bottom: 43%;
+    text-align: left;
+    width: 57%;
+    letter-spacing: 1px;
+  }
 }
+
+
 
 // iPhone 6 plus
 @media only screen
