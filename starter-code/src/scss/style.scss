@@ -432,44 +432,64 @@ form div span {
     background-repeat: no-repeat;
     background-position: center;
   }
-  nav div {
-      &.left {
-        left: -81.9%;
-        width: 84%;
-      }
-    }
 
-  nav > div.left h2 {
-      font-size: 22px;
-      margin-left: -16%;
+  h1 {
+    font-size: 30px;
+  }
+
+  h2  {
+    font-size: 12px;
+  }
+
+  .carousel-caption {
+    margin-bottom: 7%;
+  }
+
+  nav div {
+    &.left {
+      left: -81.9%;
+      width: 84%;
     }
   }
 
-  // footer {
-  //   height: 35vh;
-  //   h3 {
-  //     margin-left: 5%;
-  //   }
-  //   .email {
-  //     margin-left: -16%;
-  //   }
-  // }
-// }
+  nav > div.right {
+    background-color: #8ccdd0;
+    right: -47%;
+  }
+
+  nav > div.left h2 {
+    font-size: 22px;
+    margin-left: -16%;
+  }
+
+  footer {
+    height: 35vh;
+    h3 {
+      margin-left: 5%;
+    }
+    .email {
+      margin-left: -16%;
+      }
+    }
+  }
+
+
+
 
 // small desktop & up
 @media (min-width:992px) {
 
-  // h1 {
-  //   font-size: 30px;
-  // }
-  //
-  // h2  {
-  //   font-size: 12px;
-  // }
-  //
-  // .carousel-caption {
-  //   margin-bottom: 2%;
-  // }
+  h1 {
+    font-size: 30px;
+  }
+
+  h2  {
+    font-size: 12px;
+  }
+
+  .carousel-caption {
+    margin-bottom: 1%;
+  }
 
   #Carousel .item {
     height: 65vh;
