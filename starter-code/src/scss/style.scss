@@ -414,16 +414,19 @@ form div span {
 // }
 //
 //
-// // landscape & portrait tablet
-// @media (max-width: 768px) {
-//
-//   #Carousel .item {
-//     height: 45vh;
-//     background-size: cover;
-//     background-repeat: no-repeat;
-//     background-position: center;
-//   }
-// }
+
+
+// landscape & portrait tablet
+@media (max-width: 767px) {
+
+  .block {
+    top: 31%;
+  }
+
+  footer .email {
+    margin-left: 5%;
+  }
+}
 
 @media (max-width:887px) {
 
