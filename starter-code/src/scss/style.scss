@@ -404,24 +404,61 @@ form div span {
 
 // portrait and landscape phone
 
-@media (max-width: 480px) {
+// @media (max-width: 480px) {
+//
+//   #Carousel .item {
+//     height: 40vh;
+//   }
+//
+//
+// }
+//
+//
+// // landscape & portrait tablet
+// @media (max-width: 768px) {
+//
+//   #Carousel .item {
+//     height: 45vh;
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     background-position: center;
+//   }
+// }
+
+@media (max-width:887px) {
 
   #Carousel .item {
-    height: 40vh;
-  }
-
-
-}
-
-
-// landscape & portrait tablet
-@media (max-width: 768px) {
-
-  #Carousel .item {
-    height: 45vh;
+    height: 55vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h2  {
+    font-size: 12px;
+  }
+
+  .carousel-caption {
+    margin-bottom: 0%;
+  }
+
+  footer {
+    height: 45vh;
+    h3 {
+      margin-left: 5%;
+    }
+    // This would have centered the email form more to the left but it affected the email form centering on the iphone 5 & 6 responsiveness as a result..
+    // .email {
+    //   margin-left: -16%;
+    // }
+  }
+
+  nav > div.right {
+    right: -47.6%;
   }
 }
 
