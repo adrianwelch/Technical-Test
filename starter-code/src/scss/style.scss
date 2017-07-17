@@ -1,61 +1,179 @@
 @import 'bootstrap/bootstrap-grid';
 
-@media only screen
-and (min-device-width : 414px)
-and (max-device-width : 736px) {
+#slide1 {
+  background: url('../images/Leeds617.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
-  .navbar-inverse {
-      background-color: #e77a15;
-      width: 81%;
-  }
+#slide2 {
+  background: url('../images/ParkinsonsUK.jpg');  background-repeat: no-repeat;
+  background-position: center;
+}
 
-  .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
-    background-color: #e77a15;
-  }
+#slide3 {
+  background: url('../images/Perth.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
-  .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
-      color: #fff;
-      background-color: #e77a15;
-  }    
-
-  .navbar-toggle .icon-bar:nth-of-type(2) {
-  	  top: 1px;
-  }
-
-  .navbar-toggle .icon-bar:nth-of-type(3) {
-    	top: 2px;
-  }
-
-  .navbar-toggle .icon-bar {
-  	  position: relative;
-  	  transition: all 500ms ease-in-out;
-  }
-
-  .navbar-toggle.active .icon-bar:nth-of-type(1) {
-  	  top: 6px;
-  	  transform: rotate(45deg);
-  }
-
-  .navbar-toggle.active .icon-bar:nth-of-type(2) {
-  	  background-color: transparent;
-  }
-
-  .navbar-toggle.active .icon-bar:nth-of-type(3) {
-  	  top: -6px;
-  	  transform: rotate(-45deg);
-  }
+.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+  height: 85vh;
+  width: 100%;
 }
 
 .bottomText {
   width: 500px;
 }
 
+@media (max-width: 480px) {
 
+}
 
+@media (max-width: 768px) {
+  #slide1 {
+    background: url('../images/Leeds617.jpg');
+    width: 100%;
+    height: 310px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 
-@media(max-width:768px) {
-  h1 {
-    font-size: 200px;
-    color: red;
+  #slide2 {
+    background: url('../images/parkinson400.jpg');
+    height: 310px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  #slide3 {
+    background: url('../images/Perth.jpg');
+    height: 310px;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
+
+@media (max-width: 979px) {
+
+  #slide1 {
+    background: url('../images/Perth.jpg');
+    height: 510px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  #slide2 {
+    background: url('../images/park550.jpg');
+    height: 510px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  #slide3 {
+    background: url('../images/Leeds617.jpg');
+    height: 510px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+// large desktop
+@media (min-width: 1200px) {
+
+  #slide1 {
+    background: url('../images/Perth.jpg');
+    width: 100%;
+    height: 85vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  #slide2 {
+    background: url('../images/ParkinsonsUK.jpg');
+    height: 85vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  #slide3 {
+    background: url('../images/Leeds.jpg');
+    height: 85vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+}
+
+
+
+
+//
+// @media only screen
+// and (min-device-width : 414px)
+// and (max-device-width : 736px) {
+//
+//   .carousel {
+//     width: 126%;
+//   }
+//
+//   .bottomText {
+//   width: 185px;
+//   font-size: 12px;
+//   }
+//
+//   .carousel-inner>.item>img, .carousel-inner>.item>a>img {
+//     height: 23vh;
+//     width: 41%;
+//     margin-top: 12%;
+//   }
+//
+//   .navbar-inverse {
+//       background-color: #e77a15;
+//       width: 41%;
+//   }
+//
+//   h1 {
+//     width: 41%
+//   }
+//
+//   .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+//     background-color: #e77a15;
+//   }
+//
+//   .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
+//       color: #fff;
+//       background-color: #e77a15;
+//   }
+//
+//   .navbar-toggle .icon-bar:nth-of-type(2) {
+//   	  top: 1px;
+//   }
+//
+//   .navbar-toggle .icon-bar:nth-of-type(3) {
+//     	top: 2px;
+//   }
+//
+//   .navbar-toggle .icon-bar {
+//   	  position: relative;
+//   	  transition: all 500ms ease-in-out;
+//   }
+//
+//   .navbar-toggle.active .icon-bar:nth-of-type(1) {
+//   	  top: 6px;
+//   	  transform: rotate(45deg);
+//   }
+//
+//   .navbar-toggle.active .icon-bar:nth-of-type(2) {
+//   	  background-color: transparent;
+//   }
+//
+//   .navbar-toggle.active .icon-bar:nth-of-type(3) {
+//   	  top: -6px;
+//   	  transform: rotate(-45deg);
+//   }
+// }
