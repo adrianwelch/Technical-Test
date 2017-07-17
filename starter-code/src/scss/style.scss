@@ -1,10 +1,10 @@
 @import 'bootstrap/bootstrap-grid';
 
 // Variables
+$precedent-orange: #e77a15;
 $main-font: Lato, sans-serif;
 $pale-blue: #8ccdd0;
 $medium-blue: #79c4c8;
-$precedent-orange: #e77a15;
 
 // extend
 .centered-styles {
@@ -46,7 +46,7 @@ a {
   text-decoration: none;
 }
 
-////////////////////// MENU /////////////////////////////////
+//////////////////////  NAV  /////////////////////////////////
 nav {
   > div {
     z-index: 50;
@@ -109,45 +109,9 @@ nav {
   }
 }
 
-section {
-  min-height: 100vh;
-  padding-top: 50px;
-  .content {
-    @extend .centered-styles;
-    text-align: center;
-    max-width: 600px;
-    padding: 20px;
-    h1 {
-      margin-bottom: 30px;
-    }
-    form {
-      input, textarea {
-        @extend .form-styles;
-        margin-bottom: 10px;
-        background-color: white;
-        &:focus {
-          outline: none !important;
-          box-shadow: 0px 3px rgba(0, 0, 0, 0.15);
-        }
-      }
-      textarea {
-        height: 150px;
-        resize: none;
-      }
-      button {
-        @extend .form-styles;
-        color: black;
-        box-shadow: 0px 3px rgba(0, 0, 0, 0.15);
-        cursor: pointer;
-        &:hover {
-          animation: pulse 1s;
-        }
-      }
-    }
-  }
-}
+//////// Burger Menu
 
-.menu { // the white circle!
+.menu {
   position: fixed;
   top: 20px;
   right: 20px;
@@ -263,14 +227,14 @@ h2 {
 }
 
 .block {
-    background: #000;
-    filter: alpha(opacity=60);
-    -moz-opacity: 0.6;
-    opacity: 0.3;
-    position: absolute;
-    height: 37%;
-    width: 100%;
-    top: 22%;
+  background: #000;
+  filter: alpha(opacity=60);
+  -moz-opacity: 0.6;
+  opacity: 0.3;
+  position: absolute;
+  height: 37%;
+  width: 100%;
+  top: 22%;
 }
 
 .contactMe:hover {
@@ -279,23 +243,23 @@ h2 {
 }
 
 .btn {
-    font-family: $main-font;
-    font-weight: 400;
-    font-size: 9px;
-    letter-spacing: 0.1em;
-    line-height: 1;
-    position: relative;
-    display: inline-block;
-    background: $precedent-orange;
-    border: .5px solid white;
-    padding: 9px 6px;
-    border-radius: 0;
-    text-decoration: none;
-    color: #fff;
-    float: left;
-    margin-top: -42%;
-    text-transform: uppercase;
-    transition: background-color .3s ease-out;
+  font-family: $main-font;
+  font-weight: 400;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  position: relative;
+  display: inline-block;
+  background: $precedent-orange;
+  border: .5px solid white;
+  padding: 9px 6px;
+  border-radius: 0;
+  text-decoration: none;
+  color: #fff;
+  float: left;
+  margin-top: -42%;
+  text-transform: uppercase;
+  transition: background-color .3s ease-out;
 }
 
 .logo {
@@ -311,7 +275,6 @@ h2 {
 .bottom {
   height: 15vh;
 }
-
 
 footer {
   background-color: #89CCA4;
@@ -347,6 +310,8 @@ form div span {
   letter-spacing: 1.5px;
 }
 
+/// Carousel Images
+
 #slide1 {
   background: url('../images/Perth.jpg');
   background-repeat: no-repeat;
@@ -354,7 +319,8 @@ form div span {
 }
 
 #slide2 {
-  background: url('../images/ParkinsonsUK.jpg');  background-repeat: no-repeat;
+  background: url('../images/ParkinsonsUK.jpg');
+  background-repeat: no-repeat;
   background-position: center;
 }
 
@@ -373,7 +339,7 @@ form div span {
   width: 500px;
 }
 
-
+///////////// RESPONSIVENESS BELOW ///////////
 @media (max-width: 979px) {
 
   #Carousel .item {
@@ -382,6 +348,8 @@ form div span {
     background-position: center;
     background-size: cover;
   }
+
+  //smaller images
 
   #slide1 {
     background: url('../images/Perth.jpg');
@@ -446,6 +414,7 @@ form div span {
 }
 
 @media (min-width:887px) {
+
   #Carousel .item {
     height: 65vh;
     background-size: cover;
@@ -493,10 +462,7 @@ form div span {
     }
   }
 
-
-
-
-// small desktop & up
+/////// small desktop & up ///////
 @media (min-width:992px) {
 
   h1 {
@@ -528,7 +494,7 @@ form div span {
   }
 }
 
-// from 1200 large desktop done
+///////// from 1200 large desktop  ////////
 @media (min-width: 1200px) {
 
   #Carousel .item {
@@ -653,8 +619,9 @@ and (max-device-width : 568px) {
     margin-right: 59px;
     margin-bottom: 19px;
   }
+}  
 
-  // iPhone 6 plus
+  ////////// iPhone 6 plus ////////
   @media only screen
   and (min-device-width : 414px)
   and (max-device-width : 736px) {
@@ -730,72 +697,3 @@ and (max-device-width : 568px) {
       text-align: center;
     }
   }
-
-}
-
-
-//
-// @media only screen
-// and (min-device-width : 414px)
-// and (max-device-width : 736px) {
-//
-//   .carousel {
-//     width: 126%;
-//   }
-//
-//   .bottomText {
-//   width: 185px;
-//   font-size: 12px;
-//   }
-//
-//   .carousel-inner>.item>img, .carousel-inner>.item>a>img {
-//     height: 23vh;
-//     width: 41%;
-//     margin-top: 12%;
-//   }
-//
-//   .navbar-inverse {
-//       background-color: #e77a15;
-//       width: 41%;
-//   }
-//
-//   h1 {
-//     width: 41%
-//   }
-//
-//   .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
-//     background-color: #e77a15;
-//   }
-//
-//   .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
-//       color: #fff;
-//       background-color: #e77a15;
-//   }
-//
-//   .navbar-toggle .icon-bar:nth-of-type(2) {
-//   	  top: 1px;
-//   }
-//
-//   .navbar-toggle .icon-bar:nth-of-type(3) {
-//     	top: 2px;
-//   }
-//
-//   .navbar-toggle .icon-bar {
-//   	  position: relative;
-//   	  transition: all 500ms ease-in-out;
-//   }
-//
-//   .navbar-toggle.active .icon-bar:nth-of-type(1) {
-//   	  top: 6px;
-//   	  transform: rotate(45deg);
-//   }
-//
-//   .navbar-toggle.active .icon-bar:nth-of-type(2) {
-//   	  background-color: transparent;
-//   }
-//
-//   .navbar-toggle.active .icon-bar:nth-of-type(3) {
-//   	  top: -6px;
-//   	  transform: rotate(-45deg);
-//   }
-// }
