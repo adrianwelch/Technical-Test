@@ -31,9 +31,6 @@ $precedent-orange: #e77a15;
   box-sizing: border-box;
 }
 
-
-
-
 h1 {
   color: white;
   font-size: 36px;
@@ -399,23 +396,6 @@ form div span {
   }
 }
 
-
-
-
-// portrait and landscape phone
-
-// @media (max-width: 480px) {
-//
-//   #Carousel .item {
-//     height: 40vh;
-//   }
-//
-//
-// }
-//
-//
-
-
 // landscape & portrait tablet
 @media (max-width: 767px) {
 
@@ -579,14 +559,16 @@ form div span {
   }
 }
 
-
-
-
-
 ////// iPhone 5 & 5s
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 568px) {
+
+  #slide2 {
+    background: url('../images/parksmall.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
   h1 {
     font-size: 23px;

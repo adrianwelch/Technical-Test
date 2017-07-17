@@ -3,6 +3,7 @@ angular
   .controller('PrecedentCtrl', PrecedentCtrl, ['$scope', function($scope) {
   $scope.master = {};
 
+  // simple form taken from AngularJS doc
   $scope.update = function(user) {
     $scope.master = angular.copy(user);
   };
