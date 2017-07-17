@@ -54,6 +54,14 @@ h2 {
     transition: background-color .3s ease-out;
 }
 
+.logo {
+  background: url(../images/logo.png);
+  height: 111px;
+  background-repeat: no-repeat;
+  background-position: left;
+  margin-left: 15%;
+}
+
 
 #slide1 {
   background: url('../images/Perth.jpg');
