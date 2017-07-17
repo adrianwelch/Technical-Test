@@ -445,43 +445,18 @@ form div span {
     }
 
 
-
-
-
-
-
-
-
-
-
-
-  nav > div .links ul li a {
-
   }
 
-  nav > div.left h2 {
-    font-size: 26px;
-    margin-left: -120px;
-  }
-
-
-  h1 {
-    font-size: 30px;
-  }
-
-  h2 { font-size: 12px;
-  }
-
-  footer {
-    height: 35vh;
-    h3 {
-      margin-left: 5%;
-    }
-    .email {
-      margin-left: -16%;
-    }
-  }
-}
+  // footer {
+  //   height: 35vh;
+  //   h3 {
+  //     margin-left: 5%;
+  //   }
+  //   .email {
+  //     margin-left: -16%;
+  //   }
+  // }
+// }
 
 // small desktop & up
 @media (min-width:992px) {
@@ -501,7 +476,6 @@ form div span {
   footer {
     height: 35vh;
   }
-
 }
 
 // from 1200 large desktop done
@@ -528,6 +502,10 @@ form div span {
     text-align: left;
     width: 57%;
     letter-spacing: 1px;
+  }
+
+  .carousel-caption .btn {
+    margin-top: -42%;
   }
 }
 
