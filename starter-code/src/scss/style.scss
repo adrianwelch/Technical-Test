@@ -1,5 +1,38 @@
 @import 'bootstrap/bootstrap-grid';
 
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-size: 55px;
+  margin-right: 100%;
+  width: 259px;
+  font-weight: bold;
+  text-align: left;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-size: 14px;
+  margin-bottom: 43%;
+  text-align: left;
+  width: 57%;
+  letter-spacing: 3px;
+}
+
+
+
+
+
+.block {
+    background: #000;
+    filter: alpha(opacity=60);
+    -moz-opacity: 0.6;
+    opacity: 0.3;
+    position: absolute;
+    height: 31%;
+    width: 100%;
+    top: 22%;
+}
+
 #slide1 {
   background: url('../images/Perth.jpg');
   background-repeat: no-repeat;
@@ -49,17 +82,33 @@
   }
 }
 
+
+
+
+// portrait and landscape phone
+
+@media (max-width: 480px) {
+
+  #Carousel .item {
+    height: 40vh;
+  }
+
+
+}
+
+
 // landscape & portrait tablet
 @media (max-width: 768px) {
 
   #Carousel .item {
-    height: 310px;
+    height: 45vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
   }
 }
 
+// small desktop & up
 @media (min-width: 979px) {
 
   #Carousel .item {
@@ -78,6 +127,19 @@
   }
 }
 
+// iPhone 6 plus
+@media only screen
+and (min-device-width : 414px)
+and (max-device-width : 736px) {
+
+  #Carousel .item {
+    height: 85vh;
+  }
+
+  #slide2 {
+    background: url('../images/parkport1.png');
+    }
+}
 
 
 
