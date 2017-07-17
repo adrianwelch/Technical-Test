@@ -443,8 +443,6 @@ form div span {
       font-size: 22px;
       margin-left: -16%;
     }
-
-
   }
 
   // footer {
@@ -460,6 +458,18 @@ form div span {
 
 // small desktop & up
 @media (min-width:992px) {
+
+  // h1 {
+  //   font-size: 30px;
+  // }
+  //
+  // h2  {
+  //   font-size: 12px;
+  // }
+  //
+  // .carousel-caption {
+  //   margin-bottom: 2%;
+  // }
 
   #Carousel .item {
     height: 65vh;
@@ -516,12 +526,50 @@ form div span {
 and (min-device-width : 414px)
 and (max-device-width : 736px) {
 
-  #Carousel .item {
-    height: 85vh;
+  h1 {
+    font-size: 23px;
   }
 
-  #slide2 {
-    background: url('../images/parkport1.png');
+  h2 {
+    font-size: 11px;
+    width: 127%;
+  }
+
+  .btn {
+    font-size: 6px;
+    padding: 5px 6px;
+  }
+
+  .carousel-caption {
+    bottom: 151px;
+  }
+
+  .block {
+    top: 30%;
+    height: 27%;
+  }
+
+  #Carousel .item {
+    height: 75vh;
+  }
+
+  footer {
+    height: 25vh;
+  }
+
+  .logo {
+    margin-left: 2%;
+  }
+
+  .menu {
+    right: 38%;
+  }
+
+  nav > div.left h2 {
+    font-size: 19px;
+    width: 85px;
+    margin-top: -8%;
+    text-align: center;
     }
 }
 
