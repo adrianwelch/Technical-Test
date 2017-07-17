@@ -18,20 +18,42 @@ h2 {
   letter-spacing: 3px;
 }
 
-
-
-
-
 .block {
     background: #000;
     filter: alpha(opacity=60);
     -moz-opacity: 0.6;
     opacity: 0.3;
     position: absolute;
-    height: 31%;
+    height: 37%;
     width: 100%;
     top: 22%;
 }
+
+.contactMe:hover {
+  background-color: #FFFFFF;
+  color: #e77a15;
+}
+
+.btn {
+  font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    line-height: 1;
+    position: relative;
+    display: inline-block;
+    background: #e77a15;
+    border: .5px solid white;
+    padding: 9px 6px;
+    border-radius: 0;
+    text-decoration: none;
+    color: #fff;
+    float: left;
+    margin-top: -42%;
+    text-transform: uppercase;
+    transition: background-color .3s ease-out;
+}
+
 
 #slide1 {
   background: url('../images/Perth.jpg');
