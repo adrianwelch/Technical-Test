@@ -532,7 +532,7 @@ and (max-device-width : 736px) {
 
   h2 {
     font-size: 11px;
-    width: 127%;
+    width: 115%;
   }
 
   .btn {
@@ -570,7 +570,30 @@ and (max-device-width : 736px) {
     width: 85px;
     margin-top: -8%;
     text-align: center;
+  }
+
+  nav > div.right {
+    right: -46.6%;
+  }
+
+  footer h3 {
+    font-size: 9px;
+    text-align: center;
+    width: 88%;
+    margin-left: 5%;
+  }
+
+  footer .email {
+    text-align: center;
+    margin-top: -2%;
+    h3 {
+      margin-left: 5%;
     }
+  }
+  form label .emailInput {
+    width: 188px;
+    text-align: center;
+  }
 }
 
 
