@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-glyphicons.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
-
     <!-- inject:js -->
     <!-- endinject -->
     <!-- inject:css -->
@@ -24,39 +23,36 @@
               interval:   200000
           });
       });
-    //  burger menu from iphone 6 plus
-      $(document).ready(function () {
-			  $(".navbar-toggle").on("click", function () {
-				    $(this).toggleClass("active");
-			  });
-		});
     </script>
 	</head>
 
   <body ng-controller="PrecedentCtrl as precedent">
     <div class="container">
-<!--
-      <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#"></a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-			         <li class="active"><a href="http://precedent.com"target="_blank">Home</a></li>
-			         <li class="active"><a href="http://www.precedent.com/what-we-do"target="_blank">What we do</a></li>
-			         <li class="active"><a href="http://www.precedent.com/our-work"target="_blank">Our Thinking</a></li>
-			         <li class="active"><a href="http://www.precedent.com/our-team"target="_blank">Our Team</a></li>
-			         <li class="active"><a href="http://www.precedent.com/our-locations"target="_blank">Our Locations</a></li>
-				  </ul>
-        </div>
-      </div> -->
 
-
+      <nav ng-class="{ 'open': main.menuIsOpen }">
+        <div class="left">
+          <h2>Developed by Adrian Welch</h2>
+        </div>
+        <div class="right">
+          <div class="links">
+            <ul>
+              <li><a href="http://precedent.com"target="_blank" ui-sref-active="active">Home</a></li>
+              <li><a href="http://www.precedent.com/what-we-do"target="_blank" ui-sref-active="active">What We Do</a></li>
+              <li><a href="http://www.precedent.com/our-work"target="_blank" ui-sref-active="active">Our Thinking</a></li>
+              <li><a href="http://www.precedent.com/our-team"target="_blank" ui-sref-active="active">Our Team</a></li>
+              <li><a href=a href="http://www.precedent.com/our-locations"target="_blank" ui-sref-active="active">Our Locations</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="menu" ng-class="{ 'open': main.menuIsOpen }" ng-click="main.menuIsOpen = !main.menuIsOpen">
+        <div class="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
       <div class="row">
         <div class="col-sm-12">
 
@@ -82,7 +78,7 @@
                     <div class="block"></div>
                       <div class="carousel-caption">
                         <h1>Parkinson's UK</h1>
-                        <h2 class="intro">We were chosen to design and build a website that would help them better inform the public about Parkinson’s and dispel the myths surrounding the illness.</h2>
+                        <h2 class="intro">We were chosen to design and build a website that would help them better inform the public about Parkinson’s  and dispel the myths surrounding the illness.</h2>
                         <a href="http://precedent.com"target="_blank" class="btn wow fadeInUp contactMe" data-wow-delay="0.05s" style="visibility: visible; animation-delay: 0.05s; animation-name: fadeInUp;">Find out more</a>
                       </div>
                   </div>
@@ -115,22 +111,22 @@
           </div>
           <div class="col-md-4 email">
             <h3>Email</h3>
-            <form name="form" class="css-form" novalidate>
-              <label>
-                <input class="emailInput"  type="email" placeholder="Enter your email" ng-model="user.email" name="uEmail" required="@" />
-              </label>
-              <br />
-              <div ng-show="form.$submitted || form.uEmail.$touched">
-                <span ng-show="form.uEmail.$error.required">Email is required for subscription</span>
-                <span ng-show="form.uEmail.$error.email">This is not a valid email.</span>
+            <form name="form" novalidate>
+              <div class="form-group">
+                <label>
+                  <input class="emailInput form-control" type="email" placeholder="Enter your email" ng-model="user.email" name="input" required="@" />
+                </label>
+                <br />
+                <div ng-show="form.$submitted || form.input.$touched">
+                  <span ng-show="form.input.$error.required">Email is required for subscription</span>
+                  <span ng-show="form.input.$error.email">This is not a valid email.</span>
+                </div>
+                <!-- <input type="submit" ng-click="update(user)" value="Save" /> -->
               </div>
-              <!-- <input type="submit" ng-click="update(user)" value="Save" /> -->
             </form>
           </div>
         </div>
       </footer>
-
     </div>
   </body>
-
 </html>

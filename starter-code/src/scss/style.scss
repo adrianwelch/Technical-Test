@@ -1,7 +1,253 @@
 @import 'bootstrap/bootstrap-grid';
 
+// Variables
+$main-font: Lato, sans-serif;
+$pale-blue: #8ccdd0;
+$medium-blue: #79c4c8;
+$precedent-orange: #e77a15;
+
+// extend
+.centered-styles {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form-styles {
+  width: 100%;
+  font-size: 14px;
+  padding: 8px 10px;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: none;
+  background-color: white;
+  &:focus {
+    outline: none !important;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+
 h1 {
-  font-family: 'Lato', sans-serif;
+  color: white;
+  font-size: 36px;
+}
+
+p {
+  color: white;
+  line-height: 1.2;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+////////////////////// MENU /////////////////////////////////
+nav {
+  > div {
+    z-index: 50;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition: all 0.5s ease-in-out;
+    text-align: center;
+    &.left {
+      background-color: $medium-blue;
+      left: -46.9%;;
+      h2 {
+        @extend .centered-styles;
+        font-size: 36px;
+        color: rgba(0, 0, 0, 0.5);
+      }
+    }
+    &.right {
+      background-color: $pale-blue;
+      right: -48.6%;;
+    }
+    .links {
+      @extend .centered-styles;
+      ul {
+        list-style: none;
+        li {
+          line-height: 1.5;
+          a {
+            font-family: $main-font;
+            font-size: 26px;
+            color: white;
+            display: block;
+            letter-spacing: 2px;
+            &:hover {
+              color: rgba(0, 0, 0, 0.5);
+              animation: bounce 0.75s;
+              text-decoration: none;
+            }
+            &.active {
+              color: white;
+              opacity: 0.5;
+              text-decoration: line-through;
+              animation: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.open {
+    > div {
+      &.left {
+        left: 0;
+      }
+      &.right {
+        right: 0;
+      }
+    }
+  }
+}
+
+section {
+  min-height: 100vh;
+  padding-top: 50px;
+  .content {
+    @extend .centered-styles;
+    text-align: center;
+    max-width: 600px;
+    padding: 20px;
+    h1 {
+      margin-bottom: 30px;
+    }
+    form {
+      input, textarea {
+        @extend .form-styles;
+        margin-bottom: 10px;
+        background-color: white;
+        &:focus {
+          outline: none !important;
+          box-shadow: 0px 3px rgba(0, 0, 0, 0.15);
+        }
+      }
+      textarea {
+        height: 150px;
+        resize: none;
+      }
+      button {
+        @extend .form-styles;
+        color: black;
+        box-shadow: 0px 3px rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+        &:hover {
+          animation: pulse 1s;
+        }
+      }
+    }
+  }
+}
+
+.menu { // the white circle!
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border-radius: 50%;
+  z-index: 100;
+  box-shadow: 0px 3px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  .burger { // the burger!
+    width: 20px;
+    height: 15px;
+    @extend .centered-styles;
+    span { // the lines!
+      display: block;
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      background: #89cca4;
+      border-radius: 3px;
+      opacity: 1;
+      left: 0;
+      transform: rotate(0deg);
+      transition: all .25s ease-in-out;
+      &:nth-child(1) {
+        top: 0px;
+      }
+      &:nth-child(2),
+      &:nth-child(3) {
+        top: 6px;
+      }
+      &:nth-child(4) {
+        top: 12px;
+      }
+    }
+  }
+  &.open { // styles for when the menu is open!
+    .burger {
+      span {
+        background-color: $pale-blue;
+        &:nth-child(1) {
+          top: 6px;
+          width: 0%;
+          left: 50%;
+        }
+        &:nth-child(2) {
+          transform: rotate(45deg);
+        }
+        &:nth-child(3) {
+          transform: rotate(-45deg);
+        }
+        &:nth-child(4) {
+          top: 6px;
+          width: 0%;
+          left: 50%;
+        }
+      }
+    }
+  }
+}
+
+/////////////////////  Animations //////////////////////////////
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateY(1px);
+  }
+  75% {
+    transform: translateY(-1px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.015);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+///////////////////////// body ////////////////////////////////
+
+h1 {
+  font-family: $main-font;
   font-size: 55px;
   margin-right: 100%;
   width: 259px;
@@ -11,12 +257,12 @@ h1 {
 }
 
 h2 {
-  font-family: 'Lato', sans-serif;
+  font-family: $main-font;
   font-size: 14px;
   margin-bottom: 43%;
   text-align: left;
   width: 57%;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
 }
 
 .block {
@@ -32,18 +278,18 @@ h2 {
 
 .contactMe:hover {
   background-color: #FFFFFF;
-  color: #e77a15;
+  color: $precedent-orange;
 }
 
 .btn {
-  font-family: 'Lato', sans-serif;
+    font-family: $main-font;
     font-weight: 400;
     font-size: 9px;
     letter-spacing: 0.1em;
     line-height: 1;
     position: relative;
     display: inline-block;
-    background: #e77a15;
+    background: $precedent-orange;
     border: .5px solid white;
     padding: 9px 6px;
     border-radius: 0;
@@ -61,6 +307,8 @@ h2 {
   background-repeat: no-repeat;
   background-position: left;
   margin-left: 15%;
+  z-index: 50;
+  position: relative;
 }
 
 .bottom {
@@ -71,10 +319,11 @@ h2 {
 footer {
   background-color: #89CCA4;
   h3 {
+    color: white;
     font-size: 11px;
     text-align: left;
     width: 70%;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
     margin-left: 23%;
   }
   .email {
@@ -85,16 +334,21 @@ footer {
       margin-left: 0%;
     }
   }
-  //  #88c1d0
-  // green #89CCA4
-  // #86C9B8;
 }
 
-.emailInput {
+form label .emailInput {
   width: 288px;
+  height: 33px;
 }
 
-
+form div span {
+  width: 288px;
+  font-family: $main-font;
+  font-weight: bold;
+  font-size: 11px;
+  color: #bd0916;
+  letter-spacing: 1.5px;
+}
 
 #slide1 {
   background: url('../images/Perth.jpg');
@@ -121,6 +375,9 @@ footer {
 .bottomText {
   width: 500px;
 }
+
+
+
 
 
 @media (max-width: 979px) {
