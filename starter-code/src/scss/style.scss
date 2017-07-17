@@ -1,7 +1,7 @@
 @import 'bootstrap/bootstrap-grid';
 
 #slide1 {
-  background: url('../images/Leeds617.jpg');
+  background: url('../images/Perth.jpg');
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -12,7 +12,7 @@
 }
 
 #slide3 {
-  background: url('../images/Perth.jpg');
+  background: url('../images/Leeds617.jpg');
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -26,54 +26,45 @@
   width: 500px;
 }
 
-@media (max-width: 480px) {
-
-}
-
-@media (max-width: 768px) {
-  #slide1 {
-    background: url('../images/Leeds617.jpg');
-    width: 100%;
-    height: 310px;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  #slide2 {
-    background: url('../images/parkinson400.jpg');
-    height: 310px;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  #slide3 {
-    background: url('../images/Perth.jpg');
-    height: 310px;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-}
 
 @media (max-width: 979px) {
 
-  #slide1 {
-    background: url('../images/Perth.jpg');
+  #Carousel .item {
     height: 510px;
-    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
+  }
+
+  #slide1 {
+    background: url('../images/Perth.jpg');
   }
 
   #slide2 {
     background: url('../images/park550.jpg');
-    height: 510px;
-    background-repeat: no-repeat;
-    background-position: center;
   }
 
   #slide3 {
     background: url('../images/Leeds617.jpg');
-    height: 510px;
+  }
+}
+
+// landscape & portrait tablet
+@media (max-width: 768px) {
+
+  #Carousel .item {
+    height: 310px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+@media (min-width: 979px) {
+
+  #Carousel .item {
+    height: 65vh;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -82,31 +73,9 @@
 // large desktop
 @media (min-width: 1200px) {
 
-  #slide1 {
-    background: url('../images/Perth.jpg');
-    width: 100%;
+  #Carousel .item {
     height: 85vh;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
   }
-
-  #slide2 {
-    background: url('../images/ParkinsonsUK.jpg');
-    height: 85vh;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-
-  #slide3 {
-    background: url('../images/Leeds.jpg');
-    height: 85vh;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-
 }
 
 
